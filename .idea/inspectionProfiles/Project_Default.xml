@@ -1,0 +1,74 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="3">
+            <item index="0" class="java.lang.String" itemvalue="model_utils" />
+            <item index="1" class="java.lang.String" itemvalue="django" />
+            <item index="2" class="java.lang.String" itemvalue="rest_framework" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W292" />
+          <option value="E303" />
+          <option value="E128" />
+          <option value="E302" />
+          <option value="E117" />
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="onlineticketing.models.TimeFrameModel" />
+          <option value="onlineticketing.models.TimeStampModel" />
+          <option value="onlineticketing.viewsets.*" />
+          <option value="django.db.models.StatusField" />
+          <option value="config.settings.*" />
+          <option value="onlineticketing.views.api" />
+          <option value="config.onlineticket.viewsets.OnlineticketModelViewSet" />
+          <option value="config.onlineticket.routers.*" />
+          <option value="config.onlineticket.viewsets.OnlineticketSerializer" />
+          <option value="config.onlineticket.models.Onlineticket" />
+          <option value="config.config.urls.router" />
+          <option value="config.config.urls.apps" />
+          <option value="config.config.urls.onlineticket_router" />
+          <option value="config.config.urls.onlineticket" />
+          <option value="config.config.settings.AWS_STORAGE_BUCKET_NAME" />
+          <option value="model_utils.models.TimeFrameModel" />
+          <option value="onlineticket.viewsets.OnlineticketingModelViewSet" />
+          <option value="onlineticket.routers.rest_framework" />
+          <option value="onlineticket.models.Onlineticketing" />
+          <option value="onlineticket.serializers.rest_framework" />
+          <option value="onlineticket.serializers.OnlineticketingSerializers" />
+          <option value="onlineticket.viewsets.OnlineticketModelViewSet" />
+          <option value="onlineticket.routers.router" />
+          <option value="onlineticket.viewsets.OnlineTicketModelViewSet" />
+          <option value="onlineticket.serializers.OnlineTicketSerializers" />
+          <option value="django.db.models.UUID" />
+          <option value="onlineticket.routers.AddressModelViewSet" />
+          <option value="onlineticket.routers.EventBookingModelViewSet" />
+          <option value="onlineticket.routers.MediaBookingModelViewSet" />
+          <option value="onlineticket.routers.MediaModelViewSet" />
+          <option value="onlineticket.routers.MediaModalViewSet" />
+          <option value="onlineticket.routers.RiceModelViewSet" />
+          <option value="onlineticket.viewsets.AddressModelViewSet" />
+          <option value="onlineticket.viewsets.EventBookingModelViewSet" />
+          <option value="onlineticket.routers.PriceModelViewSet" />
+          <option value="onlineticket.models.Events" />
+          <option value="apps.onlineticket.serializers.events" />
+          <option value="apps.onlineticket.serializers.price" />
+          <option value="datetime.datetime.datetime" />
+          <option value="apps.onlineticket.serializers.BookEvent" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
