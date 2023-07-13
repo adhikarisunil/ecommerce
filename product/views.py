@@ -23,7 +23,7 @@ class BrandViewSet(viewsets.ViewSet):
         return Response(serializer.data)
     
 class ProductViewSet(viewsets.ViewSet):
-    queryset = Category.objects.all()
+    queryset = Product.objects.all()
     def list(self, request):
         serializer = CategorySerializer(self.queryset, many=True)
         return Response(serializer.data)
