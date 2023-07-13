@@ -1,3 +1,4 @@
+from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.response import Response
@@ -10,6 +11,7 @@ from .serializers import CategorySerializer, BrandSerializer, ProductSerializer
 # Create your views here.
 class CategoryViewSet(viewsets.ViewSet):
     queryset = Category.objects.all()
+    permission_classes = [IsAuthenticated]
     def list(self, request):
         serializer = CategorySerializer(self.queryset, many=True)
         return Response(serializer.data)
@@ -17,6 +19,7 @@ class CategoryViewSet(viewsets.ViewSet):
 
 class BrandViewSet(viewsets.ViewSet):
     queryset = Brand.objects.all()
+    permission_classes = [IsAuthenticated]
     print(queryset)
     def list(self, request):
         serializer = BrandSerializer(self.queryset, many=True)
@@ -24,6 +27,7 @@ class BrandViewSet(viewsets.ViewSet):
     
 class ProductViewSet(viewsets.ViewSet):
     queryset = Product.objects.all()
+    permission_classes = [IsAuthenticated]
     def list(self, request):
-        serializer = CategorySerializer(self.queryset, many=True)
+        serializer = ProductSerializer(self.queryset, many=True)
         return Response(serializer.data)
