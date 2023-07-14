@@ -25,6 +25,15 @@ class BrandViewSet(viewsets.ViewSet):
         serializer = BrandSerializer(self.queryset, many=True)
         return Response(serializer.data)
     
+    def create(self, request, *args, **kwargs):
+        serializer = BrandSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else: 
+            return Response(serializer.errors)
+
+    
 class ProductViewSet(viewsets.ViewSet):
     queryset = Product.objects.all()
     permission_classes = [IsAuthenticated]
