@@ -4,7 +4,7 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 
 from .models import Category, Brand, Product
-from .serializers import CategorySerializer, BrandSerializer, ProductSerializer
+from .serializers import CategorySerializer, BrandSerializer, ProductListSerializer, ProductSerializer
 
 
 
@@ -38,5 +38,13 @@ class ProductViewSet(viewsets.ViewSet):
     queryset = Product.objects.all()
     permission_classes = [IsAuthenticated]
     def list(self, request):
-        serializer = ProductSerializer(self.queryset, many=True)
+        serializer = ProductListSerializer(self.queryset, many=True)
         return Response(serializer.data)
+    
+    def create(self, request, *args, **kwargs):
+        serializer = ProductSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else: 
+            return Response(serializer.errors)
